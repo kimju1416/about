@@ -118,17 +118,17 @@ main{
 .tl-body p{font-size:13px;color:var(--dim)}
 
 /* ── LECTURES ── */
-.lec-list{display:flex;flex-direction:column;gap:.6rem}
+.lec-list{display:flex;flex-direction:column;gap:0}
 .lec{
-  background:var(--surface);border:1px solid var(--bd);border-radius:var(--r);
-  padding:1rem 1.2rem;
-  display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;
+  display:flex;align-items:baseline;gap:1rem;
+  padding:.55rem 0;border-bottom:1px solid var(--bd);
 }
-.lec-info h4{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px}
-.lec-info p{font-size:12px;color:var(--dim)}
+.lec:last-child{border-bottom:none}
+.lec-info h4{font-size:13px;font-weight:500;color:var(--text)}
 .lec-yr{
   font-size:12px;font-weight:600;color:var(--dim);
   font-variant-numeric:tabular-nums;white-space:nowrap;flex-shrink:0;
+  min-width:72px;
 }
 
 /* ── placeholder ── */
@@ -235,6 +235,22 @@ footer{
         <span class="tl-yr">2025–</span>
         <div class="tl-body"><h4>광평중학교</h4></div>
       </li>
+      <li class="tl-item">
+        <span class="tl-yr">2023</span>
+        <div class="tl-body"><h4>교육부 장관상 <p>학교체육 활성화</p></h4></div>
+      </li>
+      <li class="tl-item">
+        <span class="tl-yr">2024</span>
+        <div class="tl-body"><h4>교육혁신 선도교사</h4></div>
+      </li>
+      <li class="tl-item">
+        <span class="tl-yr">2025</span>
+        <div class="tl-body"><h4>터치교사단</h4></div>
+      </li>
+      <li class="tl-item">
+        <span class="tl-yr">2026</span>
+        <div class="tl-body"><h4>AI 디지털 기반 교육혁신 멘토</h4></div>
+      </li>
     </ul>
   </section>
 
@@ -242,22 +258,22 @@ footer{
   <section class="sec">
     <div class="sec-head">강의 이력</div>
     <div class="lec-list">
-      <div class="lec"><div class="lec-info"><h4>대구체육교과연구회</h4></div><span class="lec-yr">26. 1. 16</span></div>
-      <div class="lec"><div class="lec-info"><h4>경북교육청</h4></div><span class="lec-yr">26. 2. 24</span></div>
-      <div class="lec"><div class="lec-info"><h4>교사 성장학교</h4></div><span class="lec-yr">26. 4. 20</span></div>
-      <div class="lec"><div class="lec-info"><h4>비안초등학교</h4></div><span class="lec-yr">26. 4. 23</span></div>
-      <div class="lec"><div class="lec-info"><h4>문성중학교</h4></div><span class="lec-yr">26. 4. 27</span></div>
-      <div class="lec"><div class="lec-info"><h4>모계고등학교</h4></div><span class="lec-yr">26. 4. 28</span></div>
-      <div class="lec"><div class="lec-info"><h4>청송고등학교</h4></div><span class="lec-yr">26. 4. 29</span></div>
-      <div class="lec"><div class="lec-info"><h4>영동미래고등학교</h4></div><span class="lec-yr">26. 5. 14</span></div>
-      <div class="lec"><div class="lec-info"><h4>경산자인학교</h4></div><span class="lec-yr">26. 5. 21</span></div>
-      <div class="lec"><div class="lec-info"><h4>대전 경덕중학교</h4></div><span class="lec-yr">26. 6. 25</span></div>
-      <div class="lec"><div class="lec-info"><h4>봉곡중학교</h4></div><span class="lec-yr">26. 6. 29</span></div>
-      <div class="lec"><div class="lec-info"><h4>구미외국어고등학교</h4></div><span class="lec-yr">26. 6. 30</span></div>
-      <div class="lec"><div class="lec-info"><h4>금성중고등학교</h4></div><span class="lec-yr">26. 7. 1</span></div>
-      <div class="lec"><div class="lec-info"><h4>한국교원대학교</h4></div><span class="lec-yr">26. 7. 2</span></div>
-      <div class="lec"><div class="lec-info"><h4>대한민국학교체육축전</h4></div><span class="lec-yr">26. 7. 5</span></div>
-      <div class="lec"><div class="lec-info"><h4>부산교육청 교육연구정보원</h4></div><span class="lec-yr">26. 7. 27–28</span></div>
+      <div class="lec"><span class="lec-yr">26. 1. 16</span><h4>대구체육교과연구회</h4></div>
+      <div class="lec"><span class="lec-yr">26. 2. 24</span><h4>경북교육청</h4></div>
+      <div class="lec"><span class="lec-yr">26. 4. 20</span><h4>교사 성장학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 4. 23</span><h4>비안초등학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 4. 27</span><h4>문성중학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 4. 28</span><h4>모계고등학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 4. 29</span><h4>청송고등학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 5. 14</span><h4>영동미래고등학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 5. 21</span><h4>경산자인학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 6. 25</span><h4>대전 경덕중학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 6. 29</span><h4>봉곡중학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 6. 30</span><h4>구미외국어고등학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 7. 1</span><h4>금성중고등학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 7. 2</span><h4>한국교원대학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 7. 5</span><h4>대한민국학교체육축전</h4></div>
+      <div class="lec"><span class="lec-yr">26. 7. 27–28</span><h4>부산교육청 교육연구정보원</h4></div>
     </div>
   </section>
 

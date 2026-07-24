@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김주현 · kimju.zip</title>
+<meta name="description" content="불편함을 코딩으로 해결하는 15년차 체육교사 김주현(@kimju.zip)의 소개 페이지입니다.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
+<style>
+:root {
+  --bg:       #0c0c0c;
+  --surface:  #141414;
+  --surface2: #1c1c1c;
+  --bd:       rgba(255,255,255,0.07);
+  --text:     #f0f0ee;
+  --dim:      rgba(240,240,238,0.45);
+  --accent:   #b8f03c;
+  --a-dim:    rgba(184,240,60,.12);
+  --a-bd:     rgba(184,240,60,.35);
+  --r:        12px;
+  --max:      680px;
+  --px:       1.5rem;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Pretendard',-apple-system,'Apple SD Gothic Neo',sans-serif;
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── HEADER ── */
+.hd{
+  position:fixed;top:0;left:0;right:0;height:52px;
+  background:rgba(12,12,12,.88);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--bd);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 var(--px);z-index:100;
+}
+.hd-logo{
+  font-size:14px;font-weight:700;color:var(--text);text-decoration:none;
+  letter-spacing:-.01em;
+}
+.hd-logo b{color:var(--accent)}
+.hd-back{
+  font-size:12px;color:var(--dim);text-decoration:none;
+  border:1px solid var(--bd);border-radius:20px;
+  padding:.28rem .85rem;transition:all .18s;
+}
+.hd-back:hover{color:var(--text);border-color:rgba(255,255,255,.18)}
+
+/* ── LAYOUT ── */
+main{
+  max-width:var(--max);margin:0 auto;
+  padding:calc(52px + 3.5rem) var(--px) 5rem;
+}
+
+/* ── HERO ── */
+.hero{margin-bottom:3.5rem}
+
+.hero-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--accent);background:var(--a-dim);border:1px solid var(--a-bd);
+  border-radius:20px;padding:.25rem .8rem;margin-bottom:1.4rem;
+}
+
+.hero-name{
+  font-size:clamp(2rem,8vw,3.2rem);font-weight:800;
+  letter-spacing:-.035em;line-height:1.1;margin-bottom:.5rem;
+  text-wrap:balance;
+}
+.hero-name span{color:var(--accent)}
+
+.hero-role{
+  font-size:1rem;color:var(--dim);margin-bottom:1.5rem;line-height:1.8;
+}
+
+.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.5rem}
+.stat-val{
+  font-size:1.6rem;font-weight:800;color:var(--accent);
+  letter-spacing:-.03em;display:block;line-height:1.1;
+}
+.stat-lbl{
+  font-size:10px;font-weight:600;color:var(--dim);
+  letter-spacing:.08em;text-transform:uppercase;margin-top:3px;display:block;
+}
+
+/* ── SECTION ── */
+.sec{margin-bottom:2.75rem}
+.sec-head{
+  font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:1.25rem;
+  display:flex;align-items:center;gap:10px;
+}
+.sec-head::after{content:'';flex:1;height:1px;background:var(--bd)}
+
+/* ── BIO ── */
+.bio{font-size:.95rem;color:var(--dim);line-height:1.9}
+
+/* ── TIMELINE ── */
+.tl{list-style:none;display:flex;flex-direction:column;gap:0}
+.tl-item{
+  display:grid;grid-template-columns:72px 1fr;gap:.75rem 1rem;
+  padding:.9rem 0;border-bottom:1px solid var(--bd);
+}
+.tl-item:last-child{border-bottom:none;padding-bottom:0}
+.tl-yr{
+  font-size:12px;font-weight:600;color:var(--dim);
+  font-variant-numeric:tabular-nums;padding-top:2px;
+}
+.tl-body h4{font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px}
+.tl-body p{font-size:13px;color:var(--dim)}
+
+/* ── LECTURES ── */
+.lec-list{display:flex;flex-direction:column;gap:.6rem}
+.lec{
+  background:var(--surface);border:1px solid var(--bd);border-radius:var(--r);
+  padding:1rem 1.2rem;
+  display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;
+}
+.lec-info h4{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px}
+.lec-info p{font-size:12px;color:var(--dim)}
+.lec-yr{
+  font-size:12px;font-weight:600;color:var(--dim);
+  font-variant-numeric:tabular-nums;white-space:nowrap;flex-shrink:0;
+}
+
+/* ── placeholder ── */
+.ph{
+  font-size:11px;color:rgba(184,240,60,.45);
+  border:1px dashed rgba(184,240,60,.2);border-radius:4px;
+  padding:2px 8px;display:inline-block;font-weight:500;
+}
+
+/* ── CONTACT ── */
+.contact-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:.65rem;
+}
+.c-card{
+  background:var(--surface);border:1px solid var(--bd);border-radius:var(--r);
+  padding:1.1rem 1.2rem;text-decoration:none;
+  transition:background .18s,border-color .18s,transform .18s;
+  display:flex;flex-direction:column;gap:.45rem;
+}
+.c-card:hover{
+  background:var(--surface2);border-color:var(--a-bd);transform:translateY(-2px);
+}
+.c-type{
+  font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--dim);
+}
+.c-name{font-size:14px;font-weight:700;color:var(--text)}
+.c-note{font-size:11px;color:var(--dim)}
+.icon{
+  width:18px;height:18px;display:inline-block;vertical-align:middle;
+  fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;
+}
+
+/* ── AC LINK ── */
+.ac-link{
+  margin-top:3rem;
+  background:var(--a-dim);border:1px solid var(--a-bd);border-radius:var(--r);
+  padding:1.15rem 1.4rem;display:flex;align-items:center;
+  justify-content:space-between;gap:1rem;text-decoration:none;
+  transition:background .18s;
+}
+.ac-link:hover{background:rgba(184,240,60,.18)}
+.ac-link-text{font-size:14px;font-weight:700;color:var(--text)}
+.ac-link-sub{font-size:12px;color:var(--dim);margin-top:3px}
+.ac-arrow{font-size:1rem;color:var(--accent);font-weight:700}
+
+/* ── FOOTER ── */
+footer{
+  text-align:center;padding:2rem var(--px);
+  font-size:11px;color:var(--dim);
+  border-top:1px solid var(--bd);
+}
+
+@media(max-width:480px){
+  .hero-stats{gap:1.2rem}
+  .contact-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="hd">
+  <a class="hd-logo" href="/ac">kimju<b>.zip</b></a>
+  <a class="hd-back" href="/ac">← 앱 목록</a>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-tag">교사 소개</div>
+    <h1 class="hero-name">김주현<br><span>@kimju.zip</span></h1>
+    <p class="hero-role">
+      불편함을 코딩으로 해결하는 15년차 체육교사.<br>
+      Google Apps Script로 만든 교육용 웹앱을 선생님들께 무료로 공유합니다.
+    </p>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-val">40+</span>
+        <span class="stat-lbl">무료 앱</span>
+      </div>
+      <div>
+        <span class="stat-val">15년</span>
+        <span class="stat-lbl">교직 경력</span>
+      </div>
+      <div>
+        <span class="stat-val"><span class="ph">미입력</span></span>
+        <span class="stat-lbl">강의 횟수</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 소개 -->
+  <section class="sec">
+    <div class="sec-head">소개</div>
+    <p class="bio">
+      체육 교사로 근무하면서 반복되는 업무, 불편한 행정, 아날로그 방식에 답답함을 느끼고
+      직접 코딩으로 해결하기 시작했습니다. 복잡한 개발 환경 없이도 Google Apps Script(GAS)만으로
+      학교 현장에 꼭 맞는 앱을 만들 수 있다는 걸 직접 증명하고,
+      그 결과물 40여 개를 선생님들께 무료로 공유하고 있습니다.<br><br>
+      <span class="ph">추가 소개 내용을 여기에 입력해 주세요</span>
+    </p>
+  </section>
+
+  <!-- 경력 -->
+  <section class="sec">
+    <div class="sec-head">경력</div>
+    <ul class="tl">
+      <li class="tl-item">
+        <span class="tl-yr"><span class="ph">미입력</span></span>
+        <div class="tl-body">
+          <h4><span class="ph">근무 학교 / 기관</span></h4>
+          <p><span class="ph">담당 업무 또는 역할</span></p>
+        </div>
+      </li>
+      <li class="tl-item">
+        <span class="tl-yr"><span class="ph">미입력</span></span>
+        <div class="tl-body">
+          <h4><span class="ph">근무 학교 / 기관</span></h4>
+          <p><span class="ph">담당 업무 또는 역할</span></p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 강사이력 -->
+  <section class="sec">
+    <div class="sec-head">강의 이력</div>
+    <div class="lec-list">
+      <div class="lec">
+        <div class="lec-info">
+          <h4><span class="ph">강의 제목</span></h4>
+          <p><span class="ph">주최 기관</span></p>
+        </div>
+        <span class="lec-yr"><span class="ph">미입력</span></span>
+      </div>
+      <div class="lec">
+        <div class="lec-info">
+          <h4><span class="ph">강의 제목</span></h4>
+          <p><span class="ph">주최 기관</span></p>
+        </div>
+        <span class="lec-yr"><span class="ph">미입력</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 연락하기 -->
+  <section class="sec">
+    <div class="sec-head">연락하기</div>
+    <div class="contact-grid">
+
+      <a class="c-card" href="https://www.threads.net/@kimju.zip" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" stroke="var(--accent)">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+          <path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4"/>
+        </svg>
+        <span class="c-type">Threads</span>
+        <span class="c-name">@kimju.zip</span>
+        <span class="c-note">일상 · 앱 업데이트</span>
+      </a>
+
+      <a class="c-card" href="https://instagram.com/kimju.zip" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" stroke="var(--accent)">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="var(--accent)" stroke="none"/>
+        </svg>
+        <span class="c-type">Instagram</span>
+        <span class="c-name">@kimju.zip</span>
+        <span class="c-note">바이브코딩 콘텐츠</span>
+      </a>
+
+      <a class="c-card" href="mailto:dakkang27da@gmail.com">
+        <svg class="icon" viewBox="0 0 24 24" stroke="var(--accent)">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <polyline points="2,4 12,13 22,4"/>
+        </svg>
+        <span class="c-type">이메일</span>
+        <span class="c-name">강의 · 협업 문의</span>
+        <span class="c-note">dakkang27da@gmail.com</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- AC 앱 목록 링크 -->
+  <a class="ac-link" href="/ac">
+    <div>
+      <div class="ac-link-text">kimju.zip 앱 목록 바로가기</div>
+      <div class="ac-link-sub">GAS 기반 교육용 웹앱 40개 무료 공개 중</div>
+    </div>
+    <span class="ac-arrow">→</span>
+  </a>
+
+</main>
+
+<footer>
+  &copy; 2026 kimju.zip &mdash; 불편함을 코딩으로 해결하는 체육교사
+</footer>
+
+</body>
+</html>

@@ -103,19 +103,28 @@ main{
 /* ── BIO ── */
 .bio{font-size:.95rem;color:var(--dim);line-height:1.9}
 
+/* ── CAREER GRID ── */
+.career-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 2rem}
+.career-col-head{
+  font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--dim);margin-bottom:.75rem;
+}
+
 /* ── TIMELINE ── */
 .tl{list-style:none;display:flex;flex-direction:column;gap:0}
 .tl-item{
-  display:grid;grid-template-columns:72px 1fr;gap:.75rem 1rem;
-  padding:.9rem 0;border-bottom:1px solid var(--bd);
+  display:grid;grid-template-columns:60px 1fr;gap:.5rem .75rem;
+  padding:.65rem 0;border-bottom:1px solid var(--bd);
 }
 .tl-item:last-child{border-bottom:none;padding-bottom:0}
 .tl-yr{
-  font-size:12px;font-weight:600;color:var(--dim);
+  font-size:11px;font-weight:600;color:var(--dim);
   font-variant-numeric:tabular-nums;padding-top:2px;
 }
-.tl-body h4{font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px}
-.tl-body p{font-size:13px;color:var(--dim)}
+.tl-body h4{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px}
+.tl-body p{font-size:12px;color:var(--dim)}
+
+@media(max-width:520px){.career-grid{grid-template-columns:1fr}}
 
 /* ── LECTURES ── */
 .lec-list{display:flex;flex-direction:column;gap:0}
@@ -218,40 +227,26 @@ footer{
   <!-- 경력 -->
   <section class="sec">
     <div class="sec-head">경력</div>
-    <ul class="tl">
-      <li class="tl-item">
-        <span class="tl-yr">2012–2015</span>
-        <div class="tl-body"><h4>구미고등학교</h4></div>
-      </li>
-      <li class="tl-item">
-        <span class="tl-yr">2016–2019</span>
-        <div class="tl-body"><h4>구미중학교</h4></div>
-      </li>
-      <li class="tl-item">
-        <span class="tl-yr">2020–2024</span>
-        <div class="tl-body"><h4>율곡중학교</h4></div>
-      </li>
-      <li class="tl-item">
-        <span class="tl-yr">2025–</span>
-        <div class="tl-body"><h4>광평중학교</h4></div>
-      </li>
-      <li class="tl-item">
-        <span class="tl-yr">2023</span>
-        <div class="tl-body"><h4>교육부 장관상 <p>학교체육 활성화</p></h4></div>
-      </li>
-      <li class="tl-item">
-        <span class="tl-yr">2024</span>
-        <div class="tl-body"><h4>교육혁신 선도교사</h4></div>
-      </li>
-      <li class="tl-item">
-        <span class="tl-yr">2025</span>
-        <div class="tl-body"><h4>터치교사단</h4></div>
-      </li>
-      <li class="tl-item">
-        <span class="tl-yr">2026</span>
-        <div class="tl-body"><h4>AI 디지털 기반 교육혁신 멘토</h4></div>
-      </li>
-    </ul>
+    <div class="career-grid">
+      <div>
+        <div class="career-col-head">근무 경력</div>
+        <ul class="tl">
+          <li class="tl-item"><span class="tl-yr">2012–2015</span><div class="tl-body"><h4>구미고등학교</h4></div></li>
+          <li class="tl-item"><span class="tl-yr">2016–2019</span><div class="tl-body"><h4>구미중학교</h4></div></li>
+          <li class="tl-item"><span class="tl-yr">2020–2024</span><div class="tl-body"><h4>율곡중학교</h4></div></li>
+          <li class="tl-item"><span class="tl-yr">2025–</span><div class="tl-body"><h4>광평중학교</h4></div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="career-col-head">활동 경력</div>
+        <ul class="tl">
+          <li class="tl-item"><span class="tl-yr">2023</span><div class="tl-body"><h4>교육부 장관상</h4><p>학교체육 활성화</p></div></li>
+          <li class="tl-item"><span class="tl-yr">2024</span><div class="tl-body"><h4>교육혁신 선도교사</h4></div></li>
+          <li class="tl-item"><span class="tl-yr">2025</span><div class="tl-body"><h4>터치교사단</h4></div></li>
+          <li class="tl-item"><span class="tl-yr">2026</span><div class="tl-body"><h4>AI 디지털 기반 교육혁신 멘토</h4></div></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- 강사이력 -->
@@ -269,7 +264,7 @@ footer{
       <div class="lec"><span class="lec-yr">26. 5. 21</span><h4>경산자인학교</h4></div>
       <div class="lec"><span class="lec-yr">26. 6. 25</span><h4>대전 경덕중학교</h4></div>
       <div class="lec"><span class="lec-yr">26. 6. 29</span><h4>봉곡중학교</h4></div>
-      <div class="lec"><span class="lec-yr">26. 6. 30</span><h4>구미외국어고등학교</h4></div>
+      <div class="lec"><span class="lec-yr">26. 6. 30</span><h4>경북외국어고등학교</h4></div>
       <div class="lec"><span class="lec-yr">26. 7. 1</span><h4>금성중고등학교</h4></div>
       <div class="lec"><span class="lec-yr">26. 7. 2</span><h4>한국교원대학교</h4></div>
       <div class="lec"><span class="lec-yr">26. 7. 5</span><h4>대한민국학교체육축전</h4></div>
